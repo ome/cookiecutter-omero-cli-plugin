@@ -7,9 +7,7 @@
 omero-{{cookiecutter.cli_command}}
 ==================================
 
-OMERO command-line plugin for duplicating Objects in OMERO, without duplicating binary data.
-
-For usage instructions, please see `OMERO guides <https://omero-guides.readthedocs.io/projects/introduction/en/latest/data-management.html?#command-line-duplicating-objects>`_.
+{{cookiecutter.short_description}}
 
 
 Requirements
