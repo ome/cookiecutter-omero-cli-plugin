@@ -1,0 +1,9 @@
+build
+dist
+{{cookiecutter.directory_name}}-*
+*.egg*
+.cache
+*.DS_Store
+.*un~
+*.pyc
+.omero

@@ -1,0 +1,7 @@
+=======
+Changes
+=======
+
+0.1 - {% now 'local', '%Y-%m-%d' %}
+==================
+* Initial release. Based on https://github.com/ome/cookiecutter-omero-cli-plugin
