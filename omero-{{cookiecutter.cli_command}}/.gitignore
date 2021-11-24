@@ -1,6 +1,6 @@
 build
 dist
-{{cookiecutter.directory_name}}-*
+omero-{{cookiecutter.cli_command}}-*
 *.egg*
 .cache
 *.DS_Store

@@ -5,9 +5,9 @@ ifndef VERSION
 endif
 	git describe --exact
 	python setup.py sdist
-	echo twine upload dist/{{cookicutter.directory_name}}-$(VERSION).tar.gz
+	echo twine upload dist/omero-{{cookicutter.cli_command}}-$(VERSION).tar.gz
 
 clean:
-	rm -rf build dist {{cookiecutter.directory_name}}.egg-info *.pyc
+	rm -rf build dist omero-{{cookiecutter.cli_command}}.egg-info *.pyc
 
 .PHONY: release clean

@@ -37,7 +37,7 @@ setup(
     version=version,
     packages=['', 'omero.plugins'],
     package_dir={"": "src"},
-    name='{{ cookiecutter.directory_name }}',
+    name='omero-{{ cookiecutter.cli_command}}',
     description='{{ cookiecutter.short_description }}',
     long_description=read('README.rst'),
     classifiers=[
