@@ -35,7 +35,7 @@ url = '{{ cookiecutter.github_repository_url }}'
 
 setup(
     version=version,
-    packages=['', 'omero.plugins'],
+    packages=['omero-{{cookiecutter.cli_command}}', 'omero.plugins'],
     package_dir={"": "src"},
     name='omero-{{ cookiecutter.cli_command}}',
     description='{{ cookiecutter.short_description }}',
