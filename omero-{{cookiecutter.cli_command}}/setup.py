@@ -70,14 +70,3 @@ setup(
         'restview',
         'mox3'],
 )
-
-{
-    "full_name": "OME Team",
-    "email": "ome-team@openmicroscopy.org",
-    "github_username_or_organization": "ome",
-    "cli_command": "somethingshort",
-    "github_repository_url": ["https://github.com/{{cookiecutter.github_username_or_organization}}/{{cookiecutter.cli_command}}", "provide later"],
-    "module_name": "{{ cookiecutter.plugin_name|lower|replace('-', '_') }}",
-    "short_description": "A simple plugin for accessing OMERO",
-    "use_git_tags_for_versioning": "n"
-}
