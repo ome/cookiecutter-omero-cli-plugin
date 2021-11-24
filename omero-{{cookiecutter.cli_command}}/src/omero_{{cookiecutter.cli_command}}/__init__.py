@@ -24,14 +24,14 @@ import sys
 
 from omero.cli import BaseControl
 
-HELP = ("""{{cookicutter.short_description}}
+HELP = ("""{{cookiecutter.short_description}}
 
 Add your documentation here.
 
 Examples:
 
     # Do something
-    omero {{cookicutter.cli_command}} ...
+    omero {{cookiecutter.cli_command}} ...
 
 """)
 
