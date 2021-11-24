@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 
 #
-# Copyright (c) {% now 'utc', '%Y' %} University of Dundee.
+# Copyright (c) {% now 'utc', '%Y' %} {{ cookiecutter.copyright_holder }}.
 # All rights reserved.
 #
 # This program is free software; you can redistribute it and/or modify

@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 #
-# Copyright (c) {% now 'utc', '%Y' %} University of Dundee.
+# Copyright (c) {% now 'utc', '%Y' %} {{ cookiecutter.copyright_holder }}.
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU Affero General Public License as
@@ -41,7 +41,7 @@ setup(
     description='{{ cookiecutter.short_description }}',
     long_description=read('README.rst'),
     classifiers=[
-        'Development Status :: 5 - Production/Stable',
+        'Development Status :: {{cookiecutter.development_status}}',
         'Environment :: Plugins',
         'Intended Audience :: Developers',
         'Intended Audience :: End Users/Desktop',
