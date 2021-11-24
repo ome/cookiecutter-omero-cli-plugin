@@ -31,7 +31,7 @@ class Test{{class_name}}(CLITest):
     def setup_method(self, method):
         super(Test{{class_name}}, self).setup_method(method)
         self.cli.register("{{cookiecutter.cli_command}}", {{class_name}}Control, "TEST")
-        self.args += ["{{cookiecutter.cli_command"]
+        self.args += ["{{cookiecutter.cli_command}}"]
 
     def {{cookiecutter.cli_command}}(self, capfd):
         self.cli.invoke(self.args, strict=True)
