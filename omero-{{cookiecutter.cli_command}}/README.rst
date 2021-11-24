@@ -1,15 +1,13 @@
-.. image:: https://github.com/ome/omero-cli-duplicate/workflows/OMERO/badge.svg
-    :target: https://github.com/ome/omero-cli-duplicate/actions
+.. image:: {{ cookiecutter.github_repository_url }}/workflows/OMERO/badge.svg
+    :target: {{ cookiecutter.github_repository_url }}
 
-.. image:: https://badge.fury.io/py/omero-cli-duplicate.svg
-    :target: https://badge.fury.io/py/omero-cli-duplicate
+.. image:: https://badge.fury.io/py/omero-{{cookiecutter.cli_command}}.svg
+    :target: https://badge.fury.io/py/omero-{{cookiecutter.cli_command}}
 
-omero-cli-duplicate
-===================
+omero-{{cookiecutter.cli_command}}
+==================================
 
-OMERO command-line plugin for duplicating Objects in OMERO, without duplicating binary data.
-
-For usage instructions, please see `OMERO guides <https://omero-guides.readthedocs.io/projects/introduction/en/latest/data-management.html?#command-line-duplicating-objects>`_.
+{{cookiecutter.short_description}}
 
 
 Requirements
@@ -28,7 +26,7 @@ Install the command-line tool using `pip <https://pip.pypa.io/en/stable/>`_:
 
 ::
 
-    $ pip install -U omero-cli-duplicate
+    $ pip install -U omero-{{cookiecutter.cli_command}}
 
 Release process
 ---------------

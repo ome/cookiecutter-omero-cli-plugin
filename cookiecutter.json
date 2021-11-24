@@ -4,5 +4,6 @@
   "full_name": "OME Team",
   "github_username_or_organization": "ome",
   "github_repository_url": "https://github.com/{{cookiecutter.github_username_or_organization}}/omero-{{cookiecutter.cli_command}}",
-  "short_description": "A simple plugin for accessing OMERO"
+  "short_description": "A simple plugin for accessing OMERO",
+  "version": "0.1.0.dev0"
 }
