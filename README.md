@@ -1,6 +1,3 @@
-# cookiecutter-omero-cli-plugin
-Cookiecutter for OMERO.cli plugins
-
 # Cookiecutter to create simple OMERO.cli plugins
 
 This repository offers a [cookiecutter](https://cookiecutter.readthedocs.io)
