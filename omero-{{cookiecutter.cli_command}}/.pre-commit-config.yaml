@@ -77,7 +77,7 @@ repos:
           --disallow-untyped-defs,
           --ignore-missing-imports,
         ]
-        exclude: tests/
+        exclude: test/,setup.py
 
   - repo: https://github.com/adrienverge/yamllint.git
     rev: v1.26.3
