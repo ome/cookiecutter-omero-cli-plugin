@@ -20,8 +20,6 @@
 
 {% set class_name = cookiecutter.cli_command[0].upper() + cookiecutter.cli_command[1:] %}
 
-import omero
-import pytest
 from omero.testlib.cli import CLITest
 from omero.plugins.{{cookiecutter.cli_command }} import {{class_name}}Control
 
@@ -37,9 +35,11 @@ class Test{{class_name}}(CLITest):
         self.cli.invoke(self.args, strict=True)
         return capfd.readouterr()[0]
 
-    def test_{{cookiecutter.cli_command}}(self):
+    def test_{{cookiecutter.cli_command}}(self, capfd):
         name = self.uuid()
-        oid = self.create_object("Project", name="my test")
-        obj_arg = '%s%s:%s' % (object_type, model, oid)
+        object_type = "Project"
+        oid = self.create_object(object_type, name=f"{name}")
+        obj_arg = f"{object_type}:{oid}"
         self.args += [obj_arg]
-        out = self.{{cookiecutter.cli_command}}(capfd)
+        out = self.rdf(capfd)
+        assert out
