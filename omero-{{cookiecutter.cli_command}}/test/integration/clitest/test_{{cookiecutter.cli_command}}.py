@@ -23,7 +23,7 @@
 import omero
 import pytest
 from omero.testlib.cli import CLITest
-from omero.plugins.{{cookiecutter.cli_command }}import {{class_name}}Control
+from omero.plugins.{{cookiecutter.cli_command }} import {{class_name}}Control
 
 
 class Test{{class_name}}(CLITest):
