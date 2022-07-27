@@ -26,7 +26,7 @@ from omero.cli import CLI
 from omero_{{cookiecutter.cli_command}} import HELP, {{class_name}}Control
 
 try:
-    register("{{cookiecutter.cli_command}}", {{class_name}}Control, HELP)
+    register("{{cookiecutter.cli_command}}", {{class_name}}Control, HELP)  # type: ignore
 except NameError:
     if __name__ == "__main__":
         cli = CLI()
