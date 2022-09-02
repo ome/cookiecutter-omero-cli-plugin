@@ -44,7 +44,8 @@ setup(
         "Environment :: Plugins",
         "Intended Audience :: Developers",
         "Intended Audience :: End Users/Desktop",
-        "License :: OSI Approved :: GNU General Public License v2 " "or later (GPLv2+)",
+        "License :: OSI Approved :: GNU General Public License v2 "
+        "or later (GPLv2+)",  # noqa
         "Natural Language :: English",
         "Operating System :: OS Independent",
         "Programming Language :: Python :: 3",
