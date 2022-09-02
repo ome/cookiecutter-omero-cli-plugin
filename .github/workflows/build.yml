@@ -19,7 +19,7 @@ jobs:
         python-version: 3.8
     - name: Install Dependencies
       run: |
-        pip install cookiecutter flake8
+        pip install cookiecutter flake8 black
     - name: Generate Repository
       run: |
         cookiecutter . --no-input
@@ -32,3 +32,4 @@ jobs:
       run: |
         cd omero-somethingshort
         flake8 .
+        black --check .
