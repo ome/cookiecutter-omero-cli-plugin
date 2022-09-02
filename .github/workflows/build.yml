@@ -19,12 +19,16 @@ jobs:
         python-version: 3.8
     - name: Install Dependencies
       run: |
-        pip install cookiecutter
+        pip install cookiecutter flake8
     - name: Generate Repository
       run: |
         cookiecutter . --no-input
         rm -Rf omero-somethingshort/.github/workflows/
     - name: Install Generated Repositority Dependencies
       run: |
+        # cd omero-somethingshort
+        # pip install -e .[all]
+    - name: Check code
+      run: |
         cd omero-somethingshort
-        pip install -e .[all]
+        flake8 .
