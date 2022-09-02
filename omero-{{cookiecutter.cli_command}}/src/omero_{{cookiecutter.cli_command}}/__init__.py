@@ -20,7 +20,7 @@
 {% set class_name = cookiecutter.cli_command[0].upper() + cookiecutter.cli_command[1:] %}
 from omero.cli import BaseControl, Parser
 
-HELP = ("""{{cookiecutter.short_description}}
+HELP = """{{cookiecutter.short_description}}
 
 Add your documentation here.
 
@@ -29,11 +29,10 @@ Examples:
     # Do something
     omero {{cookiecutter.cli_command}} ...
 
-""")
+"""
 
 
 class {{class_name}}Control(BaseControl):
-
     def _configure(self, parser: Parser) -> None:
         parser.add_login_arguments()
         parser.add_argument(

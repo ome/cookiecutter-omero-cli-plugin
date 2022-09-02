@@ -23,7 +23,6 @@ from omero.plugins.{{cookiecutter.cli_command }} import {{class_name}}Control
 
 
 class Test{{class_name}}(CLITest):
-
     def setup_method(self, method):
         super(Test{{class_name}}, self).setup_method(method)
         self.cli.register("{{cookiecutter.cli_command}}", {{class_name}}Control, "TEST")
