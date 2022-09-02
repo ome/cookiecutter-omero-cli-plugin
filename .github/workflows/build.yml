@@ -26,8 +26,8 @@ jobs:
         rm -Rf omero-somethingshort/.github/workflows/
     - name: Install Generated Repositority Dependencies
       run: |
-        # cd omero-somethingshort
-        # pip install -e .[all]
+        cd omero-somethingshort
+        pip install -e .[all]
     - name: Check code
       run: |
         cd omero-somethingshort
