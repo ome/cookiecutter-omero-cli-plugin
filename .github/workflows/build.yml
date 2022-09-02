@@ -19,7 +19,7 @@ jobs:
         python-version: 3.8
     - name: Install Dependencies
       run: |
-        pip install cookiecutter flake8 black
+        pip install cookiecutter
     - name: Generate Repository
       run: |
         cookiecutter . --no-input
@@ -28,8 +28,3 @@ jobs:
       run: |
         cd omero-somethingshort
         pip install -e .[all]
-    - name: Run Generated Repositority Lint
-      run: |
-        cd omero-somethingshort
-        flake8 omero-somethingshort --count --verbose --show-source --statistics
-        black --check omero_cli__boilerplate
