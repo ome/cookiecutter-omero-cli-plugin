@@ -10,26 +10,34 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2.3.1
-      with:
-        persist-credentials: false
-    - name: Set up Python
-      uses: actions/setup-python@v1
-      with:
-        python-version: 3.8
-    - name: Install Dependencies
-      run: |
-        pip install cookiecutter flake8 black
-    - name: Generate Repository
-      run: |
-        cookiecutter . --no-input
-        rm -Rf omero-somethingshort/.github/workflows/
-    - name: Install Generated Repositority Dependencies
-      run: |
-        cd omero-somethingshort
-        pip install -e .[all]
-    - name: Check code
-      run: |
-        cd omero-somethingshort
-        flake8 .
-        black --check .
+      - uses: actions/checkout@v2.3.1
+        with:
+          persist-credentials: false
+      - uses: conda-incubator/setup-miniconda@v2
+        with:
+          activate-environment: test
+          python-version: 3.8
+          auto-activate-base: false
+      - name: Install Dependencies
+        shell: bash -l {0}
+        run: |
+          conda install -c conda-forge omero-py flake8 black cookiecutter
+      - name: Generate Repository
+        shell: bash -l {0}
+        run: |
+          conda activate test
+          cookiecutter . --no-input
+          rm -Rf omero-somethingshort/.github/workflows/
+      - name: Install Generated Repositority Dependencies
+        shell: bash -l {0}
+        run: |
+          conda activate test
+          cd omero-somethingshort
+          pip install -e .[all]
+      - name: Check code
+        shell: bash -l {0}
+        run: |
+          conda activate test
+          cd omero-somethingshort
+          flake8 .
+          black --check .
