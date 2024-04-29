@@ -38,3 +38,4 @@ class Test{{class_name}}(CLITest):
         oid = self.create_object(object_type, name=f"{name}")
         obj_arg = f"{object_type}:{oid}"
         self.args += [obj_arg]
+        # add your test
