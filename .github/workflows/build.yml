@@ -21,7 +21,7 @@ jobs:
       - name: Install Dependencies
         shell: bash -l {0}
         run: |
-          conda install -c conda-forge omero-py flake8 black cookiecutter
+          conda install -c conda-forge zeroc-ice==3.6.5 omero-py flake8 black cookiecutter
       - name: Generate Repository
         shell: bash -l {0}
         run: |
